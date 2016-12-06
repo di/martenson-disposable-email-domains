@@ -24,14 +24,14 @@ else:
     return True
 ```
 
-Available as [PyPI module](https://pypi.python.org/pypi/disposable-email-domains) thanks to @di
+Available as [PyPI module](https://pypi.python.org/pypi/disposable-email-domains) thanks to [@di](https://github.com/di)
 ```
 >>> from disposable_email_domains import blacklist
 >>> 'bearsarefuzzy.com' in blacklist
 True
 ```
 
-**PHP** contributed by @txt3rob and @deguif
+**PHP** contributed by [@txt3rob](https://github.com/txt3rob) and [@deguif](https://github.com/deguif)
 ```php
 function is_temp_mail($mail) {
     $mail_domains_ko = file('disposable_email_blacklist.conf', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -40,7 +40,7 @@ function is_temp_mail($mail) {
     return in_array(explode('@', $mail)[1], $mail_domains_ko);
 }
 ```
-**Ruby on Rails** contributed by @MitsunChieh
+**Ruby on Rails** contributed by [@MitsunChieh](https://github.com/MitsunChieh)
 
 In resource model, usually it is `user.rb`
 ```Ruby
@@ -73,6 +73,6 @@ to add contents of another file in the same format (only second level domains on
 Changelog
 ============
 
-* 12/6/16 - Available as [PyPI module](https://pypi.python.org/pypi/disposable-email-domains) thanks to @di
+* 12/6/16 - Available as [PyPI module](https://pypi.python.org/pypi/disposable-email-domains) thanks to [@di](https://github.com/di)
 
 * 7/27/16 - Converted all domains to the second level. This means that starting from [this commit](https://github.com/martenson/disposable-email-domains/commit/61ae67aacdab0b19098de2e13069d7c35b74017a) the implementers should take care of matching the second level domain names properly i.e. `@xxx.yyy.zzz` should match `yyy.zzz` in blacklist more info in [#46](https://github.com/martenson/disposable-email-domains/issues/46)
